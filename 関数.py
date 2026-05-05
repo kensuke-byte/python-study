@@ -101,3 +101,80 @@ if prompt == 9:
     print("This year is", a)
     print(f"This year is {a}")
     print("This year is" + str(a))
+
+if prompt == 10:
+
+    def say_hello(name):  # nameという材料をもらう
+        messege = f"こんにちは{name}さん"
+        return messege  # 作ったメッセージを返す
+
+    # 使うとき
+    result = say_hello("田中")
+    print(result)
+
+if prompt == 11:
+
+    def repeat_star(count):
+        """星を指定された回数だけ並べる関数"""
+        for i in range(count):
+            print("@", end="")
+
+    # 使うとき
+    repeat_star(5)
+
+if prompt == 12:
+
+    def tasu(a, b):
+        return a + b
+
+    # 関数を「calc」という名前の変数に代入
+    calc = tasu
+    print(calc(10, 5))
+
+if prompt == 13:
+
+    def double(n):
+        return n * 2
+
+    def apply_function(func, value):
+        """受け取った関数(func)に、値(value)を放り込む関数"""
+        return func(value)
+
+    # doubleという処理のルールをあげる
+    result = apply_function(double, 10)
+    print(result)
+
+if prompt == 14:
+
+    def decimal(*args):
+        v = 0
+        for arg in args:
+            v *= 10
+            v += arg
+        return v
+
+    # 試し
+    print(decimal(3, 2, 4))
+
+if prompt == 15:
+
+    def sum_all(*args):
+        # argsは「タプル（詰め合わせセット）」として届く
+        return sum(args)
+
+    # 試し
+    print(sum_all(1, 2))  # 3
+    print(sum_all(1, 2, 3, 4, 5))  # 15
+
+if prompt == 16:
+
+    def print_info(**kwargs):
+        """
+        kwargs:キーワード付き可変長引数
+        kwargsの中身は｛'名前'：'田中', '年齢'：25｝
+        という辞書になっている
+        """
+        print(kwargs)
+
+    # 呼び出し方は「変数=値」をカンマでつなぐ
+    print_info(名前="田中", 年齢=25, 住所="東京")
