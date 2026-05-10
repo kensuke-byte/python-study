@@ -112,3 +112,67 @@ if prompt == 16:
     wd = ["monday", "tuesday", "wednesday", "thursday", "friday"]
     sorted(wd, key=lambda x: len(x))
     print(wd)
+
+if prompt == 17:
+    furits = ["banana", "apple", "watermellon"]
+    # appleはfuritsの中にあるか
+    print("apple" in furits)  # True
+    print("orange" in furits)  # False
+
+if prompt == 18:
+    banned_user = ["unknown", "Mr_becon", "merie"]
+    print("Faker" not in banned_user)  # True
+
+if prompt == 19:
+    banned_player = ["unknown", "Mr_becon", "merie"]
+    user = print(input("あなたのプレイヤーネームは何ですか。："))
+    if user not in banned_player:
+        print("ログイン可能です。")
+    else:
+        print("あなたのアカウントは禁止されました。")
+
+if prompt == 20:
+
+    def caluculate_sum(numbers):
+        total = sum(numbers)
+        return total
+
+    my_list = [1, 2, 3, 4, 5]
+    # リストを丸ごと渡す
+    print(caluculate_sum(my_list))  # 15
+
+if prompt == 21:
+
+    def greet(First, second, third):
+        print(f"こんにちは。{First}さん、{second}さん、{third}さん！")
+
+    members = ["田中", "鈴木", "佐藤"]
+    # 普通に渡すと「引数が足りない」と怒られるが、
+    # * をつけると中身を1人ずつバラして渡してくれる
+    greet(*members)
+
+if prompt == 22:
+
+    def add_all(*args):
+        # args は (1, 2, 3) というひとまとめのデータになっている
+        return sum(args)
+
+    print(add_all(1, 2, 3))  # 6
+
+if prompt == 23:
+    # 通常の書き方
+    numbers = [1, 2, 3]
+    doubled = []
+    for n in numbers:
+        doubled.append(n * 2)
+    print(doubled)
+
+    # 内包表記
+    doubled = [n * 2 for n in numbers]
+    print(doubled)
+
+if prompt == 24:
+    names = ["tanaka", "sato", "suzuki"]
+    # 内包表記で大文字に変換
+    upper_names = [name.upper() for name in names]
+    print(upper_names)
