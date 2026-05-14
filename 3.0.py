@@ -152,3 +152,11 @@ if prompt == 15:
     # 読み込んだ整数値の符号を表示（条件演算子）
     n = int(input("整数値："))
     print(f"その値は{'正' if n > 0 else ('0' if n == 0 else '負')}")
+
+if prompt == 16:
+    score = int(input("点数を入力してください。"))
+    grade = "A" if score >= 80 else "B" if score >= 70 else "C"
+    if score >= 60:
+        print(grade + "評価で合格です．")
+    else:
+        print("不合格です")
