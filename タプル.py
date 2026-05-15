@@ -6,6 +6,9 @@ if prompt == 1:
     print(t[::-1])
     print(16 in t)
     print(16 not in t)
+else:
+    pass
+
 
 if prompt == 2:
 
@@ -14,15 +17,22 @@ if prompt == 2:
 
     name, age, gender = get_user_deta()  # タプルをアンパックしている
     print(f"名前:{name}, 年齢:{age}, 性別:{gender}")
+else:
+    pass
 
 if prompt == 3:
     a = [1, 2, 3]
     t = tuple(a)  # タプルに変換
     print(t)
     print(type(t))
+else:
+    pass
+
 
 if prompt == 4:
     a = (1, 2, 3)
     t = list(a)  # リストに変換
     print(t)
     print(type(t))
+else:
+    pass

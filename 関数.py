@@ -6,6 +6,9 @@ if prompt == 1:
             print("w", end="")
 
     w(3)
+else:
+    pass
+
 
 if prompt == 2:
 
@@ -14,6 +17,8 @@ if prompt == 2:
             print(c, end="")
 
     w(3, "負")
+else:
+    pass
 
 
 if prompt == 3:
@@ -26,6 +31,8 @@ if prompt == 3:
 
     result = check_odd_even(2)
     print(f"この数字は{result}です。")
+else:
+    pass
 
 
 if prompt == 4:
@@ -36,6 +43,8 @@ if prompt == 4:
     draw_line(10, "_")
     draw_line(4, "-")
     draw_line(4, "<>")
+else:
+    pass
 
 
 if prompt == 5:
@@ -47,6 +56,8 @@ if prompt == 5:
 
     print(safe_divide(10, 2))
     print(safe_divide(10, 0))
+else:
+    pass
 
 
 if prompt == 6:
@@ -57,6 +68,8 @@ if prompt == 6:
 
     pay_amount = calculate_tax(1000)
     print(f"お支払いは{pay_amount}です。")
+else:
+    pass
 
 
 if prompt == 7:
@@ -86,6 +99,8 @@ if prompt == 7:
     points = get_points(final_price)  # 3300をもとに33が返る
 
     print(f"代金：{final_price}円、獲得ポイント：{points}pt")
+else:
+    pass
 
 
 if prompt == 8:
@@ -95,12 +110,18 @@ if prompt == 8:
 
     fx, gx = fg(0)
     print(fx, gx)
+else:
+    pass
+
 
 if prompt == 9:
     a = 2025
     print("This year is", a)
     print(f"This year is {a}")
     print("This year is" + str(a))
+else:
+    pass
+
 
 if prompt == 10:
 
@@ -111,6 +132,9 @@ if prompt == 10:
     # 使うとき
     result = say_hello("田中")
     print(result)
+else:
+    pass
+
 
 if prompt == 11:
 
@@ -121,6 +145,9 @@ if prompt == 11:
 
     # 使うとき
     repeat_star(5)
+else:
+    pass
+
 
 if prompt == 12:
 
@@ -130,6 +157,8 @@ if prompt == 12:
     # 関数を「calc」という名前の変数に代入
     calc = tasu
     print(calc(10, 5))
+else:
+    pass
 
 if prompt == 13:
 
@@ -143,6 +172,9 @@ if prompt == 13:
     # doubleという処理のルールをあげる
     result = apply_function(double, 10)
     print(result)
+else:
+    pass
+
 
 if prompt == 14:
 
@@ -155,6 +187,9 @@ if prompt == 14:
 
     # 試し
     print(decimal(3, 2, 4))
+else:
+    pass
+
 
 if prompt == 15:
 
@@ -165,6 +200,9 @@ if prompt == 15:
     # 試し
     print(sum_all(1, 2))  # 3
     print(sum_all(1, 2, 3, 4, 5))  # 15
+else:
+    pass
+
 
 if prompt == 16:
 
@@ -178,3 +216,5 @@ if prompt == 16:
 
     # 呼び出し方は「変数=値」をカンマでつなぐ
     print_info(名前="田中", 年齢=25, 住所="東京")
+else:
+    pass
