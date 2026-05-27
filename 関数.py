@@ -1,11 +1,11 @@
 prompt = int(input("数値を入力してください。："))
 if prompt == 1:
 
-    def w(n):
+    def w1(n):
         for i in range(n):
             print("w", end="")
 
-    w(3)
+    w1(3)
 else:
     pass
 
