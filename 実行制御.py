@@ -107,3 +107,18 @@ if prompt == 12:
             print("終了します。")
 else:
     pass
+
+if prompt == 13:
+    # 整数を次々と読み込んで正の整数値を加算
+    print("正の整数値を加算します。（終了は-9999）")
+    total = 0
+    while True:
+        n = int(input("整数値："))
+        if n == -9999:
+            break  # -9999が入力されたらループを抜ける
+        if n <= 0:
+            continue  # nが正の整数値でないときは、以降の処理をスキップして次のループへ
+        total += n
+    print("合計は", total, "です。")
+else:
+    pass
