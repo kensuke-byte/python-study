@@ -91,3 +91,112 @@ if prompt == 6:
     print(user["user_02"]["age"])
 else:
     pass
+
+
+# リストの内包表記
+if prompt == 7:
+    # 基本の形　{キーの計算: 値の計算 for 要素 in データの塊}
+
+    # 通常の書き方
+    squares_01 = {}
+    for x in range(1, 4):
+        squares_01[x] = x**2
+        print(squares_01)
+        # {1: 1, 2: 4, 3: 9}
+    print()
+
+    # リストの内包表記
+    squares_02 = {x: x**2 for x in range(1, 4)}
+    print(squares_02)
+    # {1: 1, 2: 4, 3: 9}
+else:
+    pass
+
+if prompt == 8:
+    weapons = ["木の剣", "石の剣", "鉄の剣"]
+    attacks = [5, 8, 12]
+
+    # 武器名を「キー」、攻撃力を「値」にした辞書を1行で作る
+    weapon_dict = {w: a for w, a in zip(weapons, attacks)}
+
+    print(weapon_dict)
+    # 結果: {'木の剣': 5, '石の剣': 8, '鉄の剣': 12}
+else:
+    pass
+
+if prompt == 9:
+    # 元のデータ（商品名と価格）
+    prices = {"リンゴ": 100, "バナナ": 150, "メロン": 800, "イチゴ": 400}
+
+    # 200円以上（高級品）のデータだけを抽出した新しい辞書を作る
+    luxury_prices = {name: price for name, price in prices.items() if price >= 200}
+
+    print(luxury_prices)
+    # 結果: {'メロン': 800, 'イチゴ': 400}
+else:
+    pass
+
+if prompt == 10:
+    id_to_name = {101: "田中", 102: "佐藤", 103: "鈴木"}
+
+    # キー(k)と値(v)を入れ替えて {v: k} にする
+    name_to_id = {v: k for k, v in id_to_name.items()}
+
+    print(name_to_id)
+    # 結果: {'田中': 101, '佐藤': 102, '鈴木': 103}
+else:
+    pass
+
+
+# ネストしたオブジェクトの構築
+if prompt == 11:
+    # 1. まずは空の辞書（土台）を作る
+    school = {}
+
+    # 2. 「1組」というキーに、空のリストを追加する
+    school["1組"] = []
+
+    # 3. そのリストに、生徒の辞書を `.append()` で追加していく
+    school["1組"].append({"name": "太郎", "score": 80})
+    school["1組"].append({"name": "花子", "score": 95})
+
+    print(school)
+    # 結果: {'1組': [{'name': '太郎', 'score': 80}, {'name': '花子', 'score': 95}]}
+else:
+    pass
+
+if prompt == 12:
+    # 元のデータ
+    menbers_name = ["田中", "佐藤", "鈴木"]
+    jobs = ["戦士", "弓術師", "騎士"]
+
+    # 空の辞書を用意
+    game_characters = {}
+
+    # for文とzip()を使って、同時に取り出しながら組み立てる
+    for name, job in zip(menbers_name, jobs):
+        # 名前をキーにして、中身をさらに辞書にする
+        game_characters[name] = {
+            "job": job,
+            "level": 1,
+            "HP": 100,
+        }
+
+    print(game_characters)
+    # 結果: {'田中': {'job': '戦士', 'level': 1, 'HP': 100}, '佐藤': {'job': '魔法使い', ...}}
+else:
+    pass
+
+if prompt == 13:
+    member_names = ["田中", "佐藤", "鈴木"]
+    jobs = ["戦士", "魔法使い", "僧侶"]
+
+    # 1行でネストした辞書を構築
+    game_characters = {
+        name: {"job": job, "level": 1, "HP": 100}
+        for name, job in zip(member_names, jobs)
+    }
+    print(game_characters)
+    # 結果: {'田中': {'job': '戦士', 'level': 1, 'HP': 100}, '佐藤': {'job': '魔法使い', ...}}
+else:
+    pass
