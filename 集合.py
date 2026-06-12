@@ -53,3 +53,55 @@ if prompt == 4:
     print(team_a - team_b)  # {'田中'}
 else:
     pass
+
+if prompt == 5:
+    # 基本の形 {要素の計算 for 要素 in データの塊}
+
+    # 通常の書き方
+    squares = set()
+    for x in [1, 2, 2, 3]:  # 「2」が重複している
+        squares.add(x**2)
+    # 結果: {1, 4, 9} （4は1つにまとめられる）
+    print(squares)
+
+    # 集合の内包表記
+    squares = {x**2 for x in [1, 2, 2, 3]}
+    print(squares)
+else:
+    pass
+
+if prompt == 6:
+    words = {"apple", "banana", "APPLE", "BANANA"}
+
+    # 1.すべて小文字にしたリストを作る
+    lower_list = [w.lower() for w in words]  # ['apple', 'banana', 'apple', 'banana']
+    print(lower_list, "\n")
+    # 2.集合に変換してダブりを消す
+    unique_words = set(lower_list)  # {'apple', 'banana'}
+    print(unique_words)
+else:
+    pass
+
+if prompt == 7:
+    words = ["apple", "banana", "APPLE", "Banana"]
+
+    # 小文字に揃えつつ、ダブりのない集合を1行で作る
+    unique_words = set(w.lower() for w in words)
+    print(unique_words)
+else:
+    pass
+
+if prompt == 8:
+    # ランダムな数字のリスト（重複あり）
+    numbers = [1, 2, 3, 2, 4, 5, 4, 6]
+
+    # 「偶数だけ」を2倍にして、ダブりのない集合を作る
+    even_squares = {n * 2 for n in numbers if n % 2 == 0}
+
+    print(even_squares)  # {4, 8, 12}
+    """
+    偶数は [2, 2, 4, 4, 6]。2倍すると [4, 4, 8, 8, 12]。
+    集合なのでダブりが消えて {4, 8, 12} になる。
+    """
+else:
+    pass
