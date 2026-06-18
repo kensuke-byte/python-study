@@ -88,3 +88,44 @@ if prompt == 6:
         print("例外:", type(e), e)
 else:
     pass
+
+if prompt == 7:
+    # 例外クラスを自分で定義することもできる。
+    # ユーザ定義の例外クラスはExceptionを継承する必要がある。
+    class TimestampError(Exception):
+        pass
+
+    def timestamp(hour, minute, second):
+        if hour < 0 or 24 <= hour:
+            raise TimestampError("引数hourは0 <= hour < 24を満たす必要があります")
+        if minute < 0 or 60 <= minute:
+            raise TimestampError("引数minuteは0 <= minute < 60を満たす必要があります")
+        if second < 0 or 60 <= second:
+            raise TimestampError("引数secondは0 <= second < 60を満たす必要があります")
+        return hour * 3600 + minute * 60 + second
+
+    timestamp(1, 95, 22)
+else:
+    pass
+
+if prompt == 8:
+    # デバッグ目的であればassert文を使い、引数の値をチェック（テスト）して、
+    # 違反していたらAssertionErrorを送出することもできる。
+    def timestamp(hour, minute, second):
+        assert 0 <= hour < 24, "引数hourは0 <= hour < 24を満たす必要があります"
+        assert 0 <= minute < 60, "引数minuteは0 <= minute < 60を満たす必要があります"
+        assert 0 <= second < 60, "引数secondは0 <= second < 60を満たす必要があります"
+        return hour * 3600 + minute * 60 + second
+
+    timestamp(2, 43, 70)
+
+if prompt == 9:
+
+    def damage_player(player_name, damage):
+        if damage < 0:
+            raise ValueError("引数damageは0以上である必要があります")
+        print(f"{player_name}は{damage}ダメージを受けました。")
+
+    damage_player("プレイヤー1", -10)
+else:
+    pass
